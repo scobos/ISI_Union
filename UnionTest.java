@@ -35,4 +35,28 @@ public class UnionTest {
 		v3.add(2);
 		assertTrue("Ha fallado al intentar unir dos vectores", v3.equals(Union.union(v1, v2)));
 	}
+	
+	@Test (expected = NullPointerException.class)
+	public void vectorNulo{
+		v1 = null;
+		v2.add(3);
+		Union.union(v1,v2);
+	}
+	
+	@Test
+	public void elementoNulo{
+		v1.add(1);
+		v1.add(null);
+		v1.add(3);
+		
+		v2.add(4);
+		v2.add(3);
+		v2.add(null);
+		
+		v3.add(2);
+		v3.add(null)
+		assertTrue("El vector tiene elemento nulo", v3.equals(Union.union(v1, v2)));
+	}
+	
+	
 }
