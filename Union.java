@@ -13,8 +13,15 @@ public class Union {
 	 * @throws	NullPointerException If a or b is null
 	 */
 	public static Vector union (Vector a, Vector b){
+		/*funcionalidad para el segundo test*/
+		if (a==null || b==null) {
+			throw new NullPointerException ("Union.union");
+		}
+		/*funcionalidad para el primer test*/
 		Vector<Integer> vector = new Vector<Integer>();
 		vector.add((int) a.get(0));
 		vector.add((int) b.get(0));
+		
+		return vector;
 	}
 }
