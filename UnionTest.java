@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
+import java.lang.NullPointerException;
 
 public class UnionTest {
 	
@@ -58,5 +59,10 @@ public class UnionTest {
 		assertTrue("El vector tiene elemento nulo", v3.equals(Union.union(v1, v2)));
 	}
 	
-	
+	@Test
+	public void vectorVacio{
+		v1.add(1);
+		v3.add(3);
+		assertTrue("Falla porque b está vacio", v3.equals(Union.union(v1, v2)));
+	}
 }
