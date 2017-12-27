@@ -6,9 +6,9 @@ import org.junit.After;
 public class UnionTest {
 	
 	/*Estos son los test fixture*/
-	Vector<Integer> a;
-	Vector<Integer> b;
-	Vector<Integer> c;
+	Vector<Integer> v1;
+	Vector<Integer> v2;
+	Vector<Integer> v3;
 	
 	/*Metodo para preparar el test*/
 	@Before
@@ -29,11 +29,10 @@ public class UnionTest {
 	
 	
 	@Test public void primerTest{
-		a.add(1);
-		b.add(2);
-		c.add(1);
-		c.add(2);
-		assertTrue("Ha fallado al intentar unir dos vectores", c.equals(Union.union(a, b)));
-		}
+		v1.add(1);
+		v2.add(2);
+		v3.add(1);
+		v3.add(2);
+		assertTrue("Ha fallado al intentar unir dos vectores", v3.equals(Union.union(v1, v2)));
 	}
 }
