@@ -36,12 +36,22 @@ public class Union {
 		public static Set unionSet (Set a, Set b) {
 			Set set = new HashSet();
 			if (a==null || b==null) {
-				throw new NullPointerException ("UnionSet.unionSet");
+				throw new NullPointerException ("Union.unionSet");
 			}
 			set.add(a);
 			set.add(b);
 			return set
 			
+		}
+		
+		public static <E> Set<E> unionSetGeneric (Set<? extends E> a, Set<? extends E> b){
+			Set <E> set = new HashSet<E>();
+			if (a==null || b==null) {
+				throw new NullPointerException ("Union.unionSet");
+			}
+			set.add(a);
+			set.add(b);
+			return set
 		}
 	}
 }
